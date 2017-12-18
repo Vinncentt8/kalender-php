@@ -45,7 +45,7 @@
 									<?php 
 									$date = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
 									foreach ($date as $value) {
-    									echo "<option value=\"" . $month . "\">" . $month . "</option>";
+    									echo "<option value=\"" . $date . "\">" . $date . "</option>";
     								}
 
 									?>
@@ -67,60 +67,75 @@
 							<div class="container">
         <br>
         <table class="table table-bordered">
+
+        	<h3><<a><a> 2017 / 12 <a></a>></h3>
             <tr>
-                <th>S</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>T</th>
-                <th>F</th>
-                <th>S</th>
+            	<th>Zon</th>
+                <th>Maa</th>
+                <th>Din</th>
+                <th>Woe</th>
+                <th>Don</th>
+                <th>Vrij</th>
+                <th>Zat</th>                
             </tr>
 
             <tr>
+            	<td>26</td>
+            	<td>27</td>
+            	<td>28</td>
+            	<td>29</td>
+            	<td>30</td>
             	<td>1</td>
             	<td>2</td>
+            </tr>
+
+            <tr>
             	<td>3</td>
             	<td>4</td>
             	<td>5</td>
             	<td>6</td>
             	<td>7</td>
+            	<td>8</td>
+            	<td>9</td>
             </tr>
 
             <tr>
-            	<td>8</td>
-            	<td>9</td>
             	<td>10</td>
             	<td>11</td>
             	<td>12</td>
             	<td>13</td>
             	<td>14</td>
+            	<td>15</td>
+            	<td>16</td>
             </tr>
 
             <tr>
-            	<td>15</td>
             	<td>16</td>
-            	<td>17</td>
-            	<td>18</td>
+            	<td class="today">18</td>
             	<td>19</td>
             	<td>20</td>
             	<td>21</td>
+            	<td>22</td>
+            	<td>23</td>
             </tr>
 
             <tr>
-            	<td>22</td>
-            	<td>23</td>
             	<td>24</td>
             	<td>25</td>
             	<td>26</td>
             	<td>27</td>
             	<td>28</td>
-            </tr>
-
-            <tr>
             	<td>29</td>
             	<td>30</td>
+            </tr>
+            <tr>
             	<td>31</td>
+            	<td>1</td>
+            	<td>2</td>
+            	<td>3</td>
+            	<td>4</td>
+            	<td>5</td>
+            	<td></td>
             </tr>
         </table>
     </div>

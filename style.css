@@ -4,8 +4,8 @@ body{
 }
 
 #kalender{
-    width: 400px;
-   	height: 610px;
+    width: 500px;
+    height: 610px;
     border-radius: 25px;
     border: 5px solid;
     background-color: white;
@@ -60,4 +60,8 @@ body{
     margin-left: 10px;
     margin-top: 10px;
 
+ }
+
+ .today{
+    background-color: grey;
  }
