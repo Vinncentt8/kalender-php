@@ -1,0 +1,63 @@
+body{
+	background-color: dimgrey;
+	background-size: cover;
+}
+
+#kalender{
+    width: 400px;
+   	height: 610px;
+    border-radius: 25px;
+    border: 5px solid;
+    background-color: white;
+    box-shadow: 4px 4px 2px #aaaaaa;
+    
+}
+
+#uitkomst{
+    width: 400px;
+    height: 75px;
+    border-radius: 25px;
+    border: 5px solid;
+    background-color: white;
+    margin-top: 33px;
+    box-shadow: 4px 4px 2px #aaaaaa;
+}
+
+#answer{
+    width: 400px;
+    height: 119px;
+    border-radius: 25px;
+    border: 5px solid;
+    background-color: white;
+    box-shadow: 4px 4px 2px #aaaaaa;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item1{
+    z-index: 500;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 106px;
+ }
+
+ .flex-item2{
+    z-index: 500;
+    flex-direction: column;
+    margin-left: 170px;
+    margin-top: 0px;
+ }
+
+ #form11{
+    margin-top: 2px;
+    margin-left: 11px;
+ }
+
+ #today{
+    margin-left: 10px;
+    margin-top: 10px;
+
+ }
