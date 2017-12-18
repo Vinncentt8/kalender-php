@@ -1,7 +1,14 @@
 <?php
 
 
-    $currentdate = date('d-m-Y');
+$color = array("Blue","Orange","Red");
+
+$date = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
+
+$month = array("Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December");
+
+
+$currentdate = date('d-m-Y');
 
 
 
@@ -27,13 +34,14 @@
 							<input type="text" name="name" placeholder="Naam gebeurtenis">
 							<input type="submit">
 							<br>
+							<br>
 							<select name="Maand">
 								<option>Selecteer Maand</option>
 
 									<?php
-									$month = array("Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December");
+									
 									foreach ($month as $value) {
-    									echo "<option value=\"" . $month . "\">" . $month . "</option>";
+    									echo "<option value=\"" . $month . "\">" . $value . "</option>";
     								}
     								?>
 
@@ -43,22 +51,38 @@
 								<option>Selecteer Dag</option>
 								
 									<?php 
-									$date = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
+									
 									foreach ($date as $value) {
-    									echo "<option value=\"" . $date . "\">" . $date . "</option>";
+    									echo "<option value=\"" . $date . "\">" . $value . "</option>";
     								}
 
 									?>
-								
 
+								</select>
 
+								<select>
+									<option>Selecteer kleur</option>
 
-							</select>
+									<?php
+
+									foreach ($color as $value) {
+										echo "<option value=\"" . $color . "\">" . $value . "</option>";
+									}
+
+									?>
+									<option></option>
+								</select>
+
+																		
 						</form>
 					</div>
 
 					<div id="uitkomst">
-			
+						<div class="kleuren">
+								<label id="blue">Blue = afspraak</label>
+								<label id="orange">Orange = Verjaardag</label>
+								<label id="red">Red = Vakantie</label>
+						</div>
 					</div>
 				</div>
 

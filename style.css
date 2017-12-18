@@ -1,5 +1,5 @@
-body{
-	background-color: dimgrey;
+html body{
+	background-color: grey;
 	background-size: cover;
 }
 
@@ -14,7 +14,7 @@ body{
 }
 
 #uitkomst{
-    width: 400px;
+    width: 435px;
     height: 75px;
     border-radius: 25px;
     border: 5px solid;
@@ -24,8 +24,8 @@ body{
 }
 
 #answer{
-    width: 400px;
-    height: 119px;
+    width: 435px;
+    height: 165px;
     border-radius: 25px;
     border: 5px solid;
     background-color: white;
@@ -45,10 +45,10 @@ body{
  }
 
  .flex-item2{
-    z-index: 500;
+    /* z-index: 500; */
     flex-direction: column;
     margin-left: 170px;
-    margin-top: 0px;
+    margin-top: 12px;
  }
 
  #form11{
@@ -65,3 +65,29 @@ body{
  .today{
     background-color: grey;
  }
+
+ #blue{
+    background-color: blue;
+    border-radius: 25px;
+    color: white;
+    padding: 3px;
+ }
+
+ #orange{
+    background-color: orange;
+    border-radius: 25px;
+    color: white;
+    padding: 3px;
+ }
+
+ #red{
+    background-color: red;
+    border-radius: 25px;
+    color: white;
+    padding: 3px;
+ }
+
+.kleuren{
+    margin-top: 20px;
+    margin-left: 8px;
+}
