@@ -1,18 +1,36 @@
 <?php
+/*    Using "mysqli" instead of "mysql" that is obsolete.
+* Change the value of parameter 3 if you have set a password on the root userid
+* Add port number 3307 in parameter number 5 to use MariaDB instead of MySQL
+*/
+$mysqli = new mysqli('127.0.0.1', 'root', '', '');
+
+if ($mysqli->connect_error) {
+    die('Connect Error (' . $mysqli->connect_errno . ') '
+            . $mysqli->connect_error);
+}
+echo '<p>Connection OK '. $mysqli->host_info.'</p>';
+echo '<p>Server '.$mysqli->server_info.'</p>';
+$mysqli->close();
 
 
 $color = array("Blue","Orange","Red");
 
-$date = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
+$day = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
 
 $month = array("Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December");
+
+$year = array("2018","2019","2020","2021","2022","2023","2024","2025");
 
 
 $currentdate = date('d-m-Y');
 
 
+$$currentdate = 'today';
+
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -52,8 +70,8 @@ $currentdate = date('d-m-Y');
 								
 									<?php 
 									
-									foreach ($date as $value) {
-    									echo "<option value=\"" . $date . "\">" . $value . "</option>";
+									foreach ($day as $value) {
+    									echo "<option value=\"" . $day . "\">" . $value . "</option>";
     								}
 
 									?>

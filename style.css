@@ -1,6 +1,7 @@
 html body{
 	background-color: grey;
 	background-size: cover;
+    
 }
 
 #kalender{
@@ -45,11 +46,10 @@ html body{
  }
 
  .flex-item2{
-    /* z-index: 500; */
     flex-direction: column;
     margin-left: 170px;
-    margin-top: 12px;
- }
+    margin-top: -66px;
+}
 
  #form11{
     margin-top: 2px;
