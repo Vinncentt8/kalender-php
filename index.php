@@ -26,8 +26,6 @@ $year = array("2018","2019","2020","2021","2022","2023","2024","2025");
 $currentdate = date('d-m-Y');
 
 
-$$currentdate = 'today';
-
 
 ?>
 
@@ -46,7 +44,6 @@ $$currentdate = 'today';
 
 				<div class="flex-item1">
 					<div id="answer">
-						<div id="today"><label>Het is vandaag: <?= $currentdate; ?></label></div>
 						<form id="form11" action="index.php" method="post" >
 							
 							<input type="text" name="name" placeholder="Naam gebeurtenis">
@@ -153,7 +150,13 @@ $$currentdate = 'today';
 
             <tr>
             	<td>16</td>
-            	<td class="today">18</td>
+            	<td>18</td><p style="background-color: grey;">
+<?php
+   echo( date( 'F j, Y',    time() ) . '<br>');
+?>
+</p>
+
+
             	<td>19</td>
             	<td>20</td>
             	<td>21</td>
