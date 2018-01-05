@@ -1,35 +1,7 @@
 <?php
-/*    Using "mysqli" instead of "mysql" that is obsolete.
-* Change the value of parameter 3 if you have set a password on the root userid
-* Add port number 3307 in parameter number 5 to use MariaDB instead of MySQL
-*/
-$mysqli = new mysqli('127.0.0.1', 'root', '', '');
-
-if ($mysqli->connect_error) {
-    die('Connect Error (' . $mysqli->connect_errno . ') '
-            . $mysqli->connect_error);
-}
-echo '<p>Connection OK '. $mysqli->host_info.'</p>';
-echo '<p>Server '.$mysqli->server_info.'</p>';
-$mysqli->close();
-
-
-$color = array("Blue","Orange","Red");
-
-$day = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31');
-
-$month = array("Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December");
-
-$year = array("2018","2019","2020","2021","2022","2023","2024","2025");
-
-
-$currentdate = date('d-m-Y');
-
-
-
+include 'connection.php';
+include 'arrays.php';
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,70 +17,49 @@ $currentdate = date('d-m-Y');
 				<div class="flex-item1">
 					<div id="answer">
 						<form id="form11" action="index.php" method="post" >
-							
-							<input type="text" name="name" placeholder="Naam gebeurtenis">
-							<input type="submit">
-							<br>
-							<br>
-							<select name="Maand">
-								<option>Selecteer Maand</option>
+							<input type="text" name="name" placeholder="Name meeting">
+								<input type="submit">
+									<br>
+									<br>
+									<select name="month">
+										<option>Select month</option>
 
-									<?php
-									
-									foreach ($month as $value) {
-    									echo "<option value=\"" . $month . "\">" . $value . "</option>";
-    								}
-    								?>
+											<?php
+											
+												foreach ($month as $value) {
+		    										echo "<option value=\"" . $month . "\">" . $value . "</option>";
+		    									}
+		    								?>
 
 
-							</select>
-							<select name="dag">
-								<option>Selecteer Dag</option>
-								
-									<?php 
-									
-									foreach ($day as $value) {
-    									echo "<option value=\"" . $day . "\">" . $value . "</option>";
-    								}
+									</select>
 
-									?>
+										<select name="day">
+										<option>Select day</option>
 
-								</select>
+											<?php
+											
+												foreach ($day as $value) {
+		    										echo "<option value=\"" . $day . "\">" . $value . "</option>";
+		    									}
+		    								?>
 
-								<select>
-									<option>Selecteer kleur</option>
 
-									<?php
-
-									foreach ($color as $value) {
-										echo "<option value=\"" . $color . "\">" . $value . "</option>";
-									}
-
-									?>
-									<option></option>
-								</select>
-
-																		
-						</form>
-					</div>
-
-					<div id="uitkomst">
-						<div class="kleuren">
-								<label id="blue">Blue = afspraak</label>
-								<label id="orange">Orange = Verjaardag</label>
-								<label id="red">Red = Vakantie</label>
+									</select>											
+								</form>
+							</div>
 						</div>
-					</div>
-				</div>
 
 					<div class="flex-item2">
 						<div id="kalender">
 							<div class="container">
-        <br>
-        <table class="table table-bordered">
+        					<br>
+        <table class="table table-bordered"> 
 
-        	<h3><<a><a> 2017 / 12 <a></a>></h3>
+        	<h3> <?php echo(date("F Y")); ?> </h3>
             <tr>
+
+            	<!-- De value's van de array $daysOfWeek laten zien hieronder. -->
             	<th>Zon</th>
                 <th>Maa</th>
                 <th>Din</th>
@@ -118,6 +69,14 @@ $currentdate = date('d-m-Y');
                 <th>Zat</th>                
             </tr>
 
+            <!-- Hieronder automatisch de dagen laten zien door een current time variable te maken die met een array de dagen laat zien. -->
+            <!-- $today = date('\i\t \i\s \t\h\e jS \d\a\y.');   // it is the 10th day. -->
+            <!-- Nu de dagen van de maand nog en dan de Table's invoegen -->
+            <p id="date"  style="background-color: grey;">
+            <?php
+   				echo( date( 'l j',    time() ));
+   			?>
+   			</p>
             <tr>
             	<td>26</td>
             	<td>27</td>
@@ -150,14 +109,8 @@ $currentdate = date('d-m-Y');
 
             <tr>
             	<td>16</td>
-            	<td>18</td><p style="background-color: grey;">
-<?php
-   echo( date( 'F j, Y',    time() ) . '<br>');
-?>
-</p>
-
-
-            	<td>19</td>
+            	<td>18</td>
+	         	<td>19</td>
             	<td>20</td>
             	<td>21</td>
             	<td>22</td>
