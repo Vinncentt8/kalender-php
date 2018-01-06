@@ -70,28 +70,6 @@ html body{
     padding: 10px;
  }
 
- #blue{
-    background-color: blue;
-    border-radius: 25px;
-    color: white;
-    padding: 3px;
- }
-
- #orange{
-    background-color: orange;
-    border-radius: 25px;
-    color: white;
-    padding: 3px;
- }
-
- #red{
-    background-color: red;
-    border-radius: 25px;
-    color: white;
-    padding: 3px;
- }
-
-.kleuren{
-    margin-top: 20px;
-    margin-left: 8px;
+html tr{
+    background-color: yellow;
 }
