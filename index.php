@@ -73,13 +73,14 @@ include 'arrays.php';
             <tr>
 
             	<!-- De value's van de array $daysOfWeek laten zien hieronder. -->
-            	<th>Zon</th>
-                <th>Maa</th>
-                <th>Din</th>
-                <th>Woe</th>
-                <th>Don</th>
-                <th>Vrij</th>
-                <th>Zat</th>                
+           
+            	<th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wen</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>                
             </tr>
 
             <!-- Hieronder automatisch de dagen laten zien door een current time variable te maken die met een array de dagen laat zien. -->

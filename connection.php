@@ -10,5 +10,20 @@ if ($mysqli->connect_error) {
 }
 echo '<p>Connection OK '. $mysqli->host_info.'</p>';
 echo '<p>Server '.$mysqli->server_info.'</p>';
+
+
+$sql = "EXPLAIN SELECT * FROM `table_cal`";
+
+
+if (mysqli_query($mysqli, $sql)) {
+    echo "Table table_cal created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($mysqli);
+}
+
+
+
+
 $mysqli->close();
+
 ?>
