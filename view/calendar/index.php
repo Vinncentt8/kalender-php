@@ -15,7 +15,8 @@ $day = "";
 			echo "<h2>" . $bday['day']  . "</h2>";
 			$day = $bday["day"];
 		}
-			echo "<p><a href = '" . URL . "calendar/edit/" . $bday["id"]. "'>" . $bday["person"] . "(" . $bday['year'] . ")" . "</a><a href = '" . URL . "calendar/delete/" . $bday["id"]. "'>x</a></p>";
+			echo "<p><a href = '" . URL . "calendar/edit/" . $bday["id"]. "'>" . $bday["person"] . "(" . $bday['year'] . ")" . " </a><a href = '" . URL . "calendar/delete/" . $bday["id"]. "'>x</a></p>";
+			
 	}
 
 ?>

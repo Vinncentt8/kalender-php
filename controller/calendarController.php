@@ -31,3 +31,24 @@ function save(){
 	// Stuur het programma weer terug naar de index action
 	header('Location: '.URL."calendar");
 }
+
+function edit($id){
+	//echo "zit nu in de edit";
+
+
+
+	$birthdate = getBirthdateById($id);
+
+	echo "received in controller:<br>";
+	print_r($birthdate);
+
+	render("calendar/edit", ['birthday' => $birthdate]);
+// $result = update($_POST);
+}
+
+
+function editSave(){
+
+	update($_POST);
+	header('Location: ' . URL . 'calendar' );
+}
