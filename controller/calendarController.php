@@ -22,7 +22,10 @@ function add(){
 
 function save(){
 	// Maak een array aan met de waarden uit de $_POST variabele
-	//$answers = array[$_post["name"], $_post["day"], $_post["month"],$_post["year"]];
+	//$answers = array($_post["name"], $_post["day"], $_post["month"],$_post["year"]);
+
+	$result = saveBirthday($_POST);
+	
 	// Roep een functie uit de Model aan die de verjaardag toevoegt
 
 	// Stuur het programma weer terug naar de index action

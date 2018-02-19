@@ -21,3 +21,18 @@ function deleteBirthday($id){
 	$query->bindParam(":id", $id);
 	$query->execute();
 }
+
+function saveBirthday($answers){
+	$db = openDatabaseConnection();
+
+	$sql = "INSERT INTO birthdays (person, day, month, year) VALUES (:name, :day, :month, :year);";
+	var_dump($answers);
+
+	//"INSERT INTO birthdays WHERE id = :id";
+	$query = $db->prepare($sql);
+	$query->bindParam(":name", $answers['person']);
+	$query->bindParam(":day", $answers['day']);
+	$query->bindParam(":month", $answers['month']);
+	$query->bindParam(":year", $answers['year']);
+	$query->execute();
+}
