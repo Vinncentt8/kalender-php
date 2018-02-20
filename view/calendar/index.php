@@ -1,4 +1,4 @@
-<h1>Birthdate calendar</h1>
+<h1>Birthday calendar</h1>
 
 <?php
 
