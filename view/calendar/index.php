@@ -1,4 +1,4 @@
-<h1>Verjaardagskalender</h1>
+<h1>Birthdate calendar</h1>
 
 <?php
 
@@ -20,6 +20,6 @@ $day = "";
 	}
 
 ?>
-<p><a href = "<?=URL?>calendar/add">Toevoegen</a></p>
+<p><a href = "<?=URL?>calendar/add">Add birthdate</a></p>
 
 

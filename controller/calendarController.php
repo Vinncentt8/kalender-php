@@ -1,6 +1,6 @@
 <?php
 
-require(ROOT . "model/BirthdateModel.php");
+require(ROOT . "model/calendarModel.php");
 
 function index()
 {
@@ -38,9 +38,7 @@ function edit($id){
 
 
 	$birthdate = getBirthdateById($id);
-
-	echo "received in controller:<br>";
-	print_r($birthdate);
+	
 
 	render("calendar/edit", ['birthday' => $birthdate]);
 // $result = update($_POST);
