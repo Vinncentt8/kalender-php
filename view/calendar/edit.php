@@ -1,5 +1,3 @@
-
-
 <?php
 echo "Edit a Birthdate:"
 ?>
