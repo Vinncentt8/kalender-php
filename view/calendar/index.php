@@ -9,6 +9,7 @@ $day = "";
 		if ($bday["month"] != $month) {
 			echo "<h1>" . date('F', mktime(0, 0, 0, $bday['month'], 10))  . "</h1>";
 			$month = $bday["month"];
+			$day = "";
 		}
 
 		if($bday["day"] != $day){
